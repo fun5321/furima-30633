@@ -9,7 +9,7 @@
 | name            | string | null: false |
 | myouji_hurigana | string | null: false |
 | name_hurigana   | string | null: false |
-| birthday        | string | null: false |
+| birthday        | date   | null: false |
 
 
 ### Association
@@ -19,16 +19,16 @@
 
 ## items テーブル
 
-| Colum                 | Type    | Option      |
-|-----------------------|---------|-------------|
-| name                  | string  | null: false |
-| info                  | text    | null: false |
-| cotegory_id           | integer | null: false |
-| sales_status_id       | integer | null: false |
-| shippng_fee_status_id | integer | null: false |
-| prefecture_id         | integer | null: false |
-| scheduled_delivery_id | integer | null: false |
-| price                 | integer | null: false |
+| Colum                 | Type    | Options                        |
+|-----------------------|---------|--------------------------------|
+| name                  | string  | null: false                    |
+| info                  | text    | null: false                    |
+| cotegory_id           | integer | null: false                    |
+| sales_status_id       | integer | null: false                    |
+| shippng_fee_status_id | integer | null: false, foreign_key: true |
+| prefecture_id         | integer | null: false, foreign_key: true |
+| scheduled_delivery_id | integer | null: false, foreign_key: true |
+| price                 | integer | null: false, foreign_key: true |
 
 ### Association
 
@@ -37,10 +37,10 @@
 
 ## buys テーブル
 
-| Colum        | Type    | Option      |
-|--------------|---------|-------------|
-| item_payment | integer | null: false |
-| credit_card  | string  | null: false |
+| Colum   | Type    | Options                       |
+|---------|---------|-------------------------------|
+| item_id | integer | null: false, foreign_key: true|
+| user_id | string  | null: false, foreign_key: true|
 
 ### Association
 
@@ -54,8 +54,11 @@
 | -----------------| ------- | ----------- |
 | shipping_address | string  | null: false |
 | postal_code      | string  | null: false |
-| street_address   | string  | null: false |
-| phone_number     | string  | null: false |
+| prefectures      | string  | null: false |
+| minicipalities   | string  | null: false |
+| address          | integer | null: false |
+| building_name    | string  | null: false |  
+| phone_number     | integer | null: false |
 
 ### Association
 
