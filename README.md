@@ -1,24 +1,54 @@
-# README
+## users テーブル
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+| Column   | Type   | Options     |
+|--------- |--------|------------ |
+| nickname | string | null: false |
+| email    | string | null: false |
+| password | string | null: false |
 
-Things you may want to cover:
+### Association
 
-* Ruby version
+- has_many :items_users
+- has_many :buys
 
-* System dependencies
+## items テーブル
 
-* Configuration
+| Colum               | Type    | Option      |
+|---------------------|---------|-------------|
+| name                | string  | null: false |
+| info                | text    | null: false |
+| cotegory            | string  | null: false |
+| sales_status        | string  | null: false |
+| shippng_fee_status  | string  | null: false |
+| prefecture          | string  | null: false |
+| scheduled_delivery  | string  | null: false |
+| price               | integer | null: false |
 
-* Database creation
+### Association
 
-* Database initialization
+- has_one :buy
+- belongs_to :user
 
-* How to run the test suite
+## buys テーブル
 
-* Services (job queues, cache servers, search engines, etc.)
+| Colum        | Type    | Option      |
+|--------------|---------|-------------|
+| item_payment | integer | null: false |
+| credit_card  | string  | null: false |
 
-* Deployment instructions
+### Association
 
-* ...
+- has_one :address
+- belongs_to :item
+- belomgs_to :user
+
+## addresses テーブル
+
+| Column           | Type    | Options     |
+| -----------------| ------- | ----------- |
+| shipping_address | string  | null: false |
+
+### Association
+
+- belongs_to :buy
+
