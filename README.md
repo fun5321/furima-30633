@@ -1,28 +1,34 @@
 ## users テーブル
 
-| Column   | Type   | Options     |
-|--------- |--------|------------ |
-| nickname | string | null: false |
-| email    | string | null: false |
-| password | string | null: false |
+| Column          | Type   | Options     |
+|---------------- |--------|------------ |
+| nickname        | string | null: false |
+| email           | string | null: false |
+| password        | string | null: false |
+| myouji          | string | null: false |
+| name            | string | null: false |
+| myouji_hurigana | string | null: false |
+| name_hurigana   | string | null: false |
+| birthday        | string | null: false |
+
 
 ### Association
 
-- has_many :items_users
+- has_many :items
 - has_many :buys
 
 ## items テーブル
 
-| Colum               | Type    | Option      |
-|---------------------|---------|-------------|
-| name                | string  | null: false |
-| info                | text    | null: false |
-| cotegory            | string  | null: false |
-| sales_status        | string  | null: false |
-| shippng_fee_status  | string  | null: false |
-| prefecture          | string  | null: false |
-| scheduled_delivery  | string  | null: false |
-| price               | integer | null: false |
+| Colum                 | Type    | Option      |
+|-----------------------|---------|-------------|
+| name                  | string  | null: false |
+| info                  | text    | null: false |
+| cotegory_id           | integer | null: false |
+| sales_status_id       | integer | null: false |
+| shippng_fee_status_id | integer | null: false |
+| prefecture_id         | integer | null: false |
+| scheduled_delivery_id | integer | null: false |
+| price                 | integer | null: false |
 
 ### Association
 
@@ -47,6 +53,9 @@
 | Column           | Type    | Options     |
 | -----------------| ------- | ----------- |
 | shipping_address | string  | null: false |
+| postal_code      | string  | null: false |
+| street_address   | string  | null: false |
+| phone_number     | string  | null: false |
 
 ### Association
 
