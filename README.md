@@ -19,16 +19,16 @@
 
 ## items テーブル
 
-| Colum                 | Type    | Options                        |
-|-----------------------|---------|--------------------------------|
-| name                  | string  | null: false                    |
-| info                  | text    | null: false                    |
-| cotegory_id           | integer | null: false                    |
-| sales_status_id       | integer | null: false                    |
-| shippng_fee_status_id | integer | null: false, foreign_key: true |
-| prefecture_id         | integer | null: false, foreign_key: true |
-| scheduled_delivery_id | integer | null: false, foreign_key: true |
-| price                 | integer | null: false, foreign_key: true |
+| Colum                 | Type    | Options     |
+|-----------------------|---------|-------------|
+| name                  | string  | null: false |
+| info                  | text    | null: false |
+| cotegory_id           | integer | null: false |
+| sales_status_id       | integer | null: false |
+| shippng_fee_status_id | integer | null: false |
+| prefecture_id         | integer | null: false |
+| scheduled_delivery_id | integer | null: false |
+| price                 | integer | null: false |
 
 ### Association
 
@@ -40,7 +40,7 @@
 | Colum   | Type    | Options                       |
 |---------|---------|-------------------------------|
 | item_id | integer | null: false, foreign_key: true|
-| user_id | string  | null: false, foreign_key: true|
+| user_id | integer | null: false, foreign_key: true|
 
 ### Association
 
@@ -56,9 +56,9 @@
 | postal_code      | string  | null: false |
 | prefectures      | string  | null: false |
 | minicipalities   | string  | null: false |
-| address          | integer | null: false |
+| address          | string  | null: false |
 | building_name    | string  | null: false |  
-| phone_number     | integer | null: false |
+| phone_number     | string  | null: false |
 
 ### Association
 
