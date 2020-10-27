@@ -10,9 +10,7 @@
 | name_namae            | string | null: false |
 | nick_reading_myoji    | string | null: false |
 | nick_reading_namae    | string | null: false |
-| birthday_year         | date   | null: false |
-| birthday_month        | date   | null: false |
-| birthday_day          | date   | null: false |
+| birthday              | date   | null: false |
 
 
 ### Association
