@@ -6,9 +6,13 @@
 | email                 | string | null: false |
 | password              | string | null: false |
 | encrypted_password    | string | null: false |
-| name                  | string | null: false |
-| nick_reading          | string | null: false |
-| birthday              | date   | null: false |
+| name_myoji            | string | null: false |
+| name_namae            | string | null: false |
+| nick_reading_myoji    | string | null: false |
+| nick_reading_namae    | string | null: false |
+| birthday_year         | date   | null: false |
+| birthday_month        | date   | null: false |
+| birthday_day          | date   | null: false |
 
 
 ### Association
