@@ -1,15 +1,14 @@
 ## users テーブル
 
-| Column          | Type   | Options     |
-|---------------- |--------|------------ |
-| nickname        | string | null: false |
-| email           | string | null: false |
-| password        | string | null: false |
-| myouji          | string | null: false |
-| name            | string | null: false |
-| myouji_hurigana | string | null: false |
-| name_hurigana   | string | null: false |
-| birthday        | date   | null: false |
+| Column                | Type   | Options     |
+|---------------------- |--------|------------ |
+| nickname              | string | null: false |
+| email                 | string | null: false |
+| password              | string | null: false |
+| encrypted_password    | string | null: false |
+| name                  | string | null: false |
+| nick_reading          | string | null: false |
+| birthday              | date   | null: false |
 
 
 ### Association
@@ -29,7 +28,7 @@
 | prefecture_id         | integer    | null: false                    |
 | scheduled_delivery_id | integer    | null: false                    |
 | price                 | integer    | null: false                    |
-| user                  | references | null: false, foreign_key: true |
+| user_id               | references | null: false, foreign_key: true |
 
 
 ### Association
@@ -55,11 +54,12 @@
 | Column           | Type       | Options                        |
 | -----------------| ---------- | ------------------------------ |
 | postal_code      | string     | null: false                    |
-| prefectures      | string     | null: false                    |
-| minicipalities   | string     | null: false                    |
-| address          | references | null: false, foreign_key: true |
-| building_name    | references | foreign_key: true              |  
-| phone_number     | references | null: false, foreign_key: true | 
+| prefectures_id   | integer    | null: false                    |
+| city             | string     | null: false                    |
+| house_number     | string     | null: false                    |
+| building_name    | string     |                                |  
+| phone_number     | string     | null: false                    | 
+| user_id          | references | null: false, foreign_key: true |
 
 ### Association
 
